@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4b882c611f484cb1a63a24174d29e4ab" Name="Diagram1" ZoomLevel="91">
+      <Diagram DiagramId="4b882c611f484cb1a63a24174d29e4ab" Name="Diagram1" ZoomLevel="100">
         <EntityTypeShape EntityType="DueCheckDatabaseModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblAccountSection" Width="1.5" PointX="5.25" PointY="28.125" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblAccountSection" Width="1.5" PointX="0.5" PointY="18.25" />
         <EntityTypeShape EntityType="DueCheckDatabaseModel.tblBranch" Width="1.5" PointX="0.75" PointY="15.5" />
         <EntityTypeShape EntityType="DueCheckDatabaseModel.tblCaste" Width="1.5" PointX="0.75" PointY="9.25" />
         <EntityTypeShape EntityType="DueCheckDatabaseModel.tblDepartement" Width="1.5" PointX="5.25" PointY="11.75" />
         <EntityTypeShape EntityType="DueCheckDatabaseModel.tblGender" Width="1.5" PointX="0.75" PointY="12.375" />
-        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblGym" Width="1.5" PointX="5.25" PointY="22.125" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblGym" Width="1.5" PointX="5.5" PointY="16.875" />
         <EntityTypeShape EntityType="DueCheckDatabaseModel.tblHostel" Width="1.5" PointX="8.25" PointY="12.125" />
-        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblLibrary" Width="1.5" PointX="5.25" PointY="30.5" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblLibrary" Width="1.5" PointX="4.625" PointY="19.25" />
         <EntityTypeShape EntityType="DueCheckDatabaseModel.tblScholarship" Width="1.5" PointX="8.25" PointY="15.125" />
         <EntityTypeShape EntityType="DueCheckDatabaseModel.tblStudent" Width="1.5" PointX="3" PointY="10.875" />
         <EntityTypeShape EntityType="DueCheckDatabaseModel.tblStudentSection" Width="1.5" PointX="5.25" PointY="7.75" />
@@ -43,6 +43,41 @@
         <AssociationConnector Association="DueCheckDatabaseModel.FK_tblDepartement_tblYesNo21" />
         <EntityTypeShape EntityType="DueCheckDatabaseModel.tblAdmin" Width="1.5" PointX="3.75" PointY="0.75" />
         <EntityTypeShape EntityType="DueCheckDatabaseModel.tblStudentLogin" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblAccountSection1" Width="1.5" PointX="14.875" PointY="21.75" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblAdmin1" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblBranch1" Width="1.5" PointX="10.375" PointY="18.375" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblCaste1" Width="1.5" PointX="10.375" PointY="12.25" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblDepartement1" Width="1.5" PointX="14.875" PointY="11.625" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblGender1" Width="1.5" PointX="10.375" PointY="6.125" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblGym1" Width="1.5" PointX="14.875" PointY="27.625" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblHostel1" Width="1.5" PointX="17.875" PointY="12" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblLibrary1" Width="1.5" PointX="14.875" PointY="30.125" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblScholarship1" Width="1.5" PointX="17.875" PointY="9" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblStudent1" Width="1.5" PointX="12.625" PointY="10.75" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblStudentLogin1" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblStudentSection1" Width="1.5" PointX="14.875" PointY="7.625" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblTPO1" Width="1.5" PointX="17.875" PointY="15.125" />
+        <EntityTypeShape EntityType="DueCheckDatabaseModel.tblYesNo1" Width="1.5" PointX="12.625" PointY="6.5" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblAccountSection_tblStudent1" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblStudent_tblBranch1" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblStudent_tblCaste1" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblDepartement_tblStudent1" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblDepartement_tblYesNo4" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblDepartement_tblYesNo11" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblDepartement_tblYesNo22" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblStudent_tblGender1" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblGym_tblStudent1" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblHostel_tblStudent1" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblHostel_tblYesNo1" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblLibrary_tblStudent1" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblScholarship_tblStudent1" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblScholarship_tblYesNo1" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblStudentSection_tblStudent1" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblTPO_tblStudent1" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblStudentSection_tblYesNo3" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblStudentSection_tblYesNo11" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblStudentSection_tblYesNo21" />
+        <AssociationConnector Association="DueCheckDatabaseModel.FK_tblTPO_tblYesNo1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
