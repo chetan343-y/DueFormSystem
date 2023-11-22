@@ -1,0 +1,58 @@
+﻿@model IEnumerable<DueFormSystem.tblStudentSection>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Student Details</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PendingFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblStudent.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblYesNo.Value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblYesNo1.Value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblYesNo2.Value)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PendingFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblStudent.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblYesNo.Value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblYesNo1.Value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblYesNo2.Value)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PRNNo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PRNNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PRNNo })
+        </td>
+    </tr>
+}
+
+</table>

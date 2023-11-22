@@ -1,0 +1,175 @@
+﻿
+@{
+    ViewBag.Title = "Pay";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .payment-method {
+            background-color: #120f0f;
+            color: wheat;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            max-width: 200px;
+            max-height: 130px;
+            text-align: center;
+        }
+
+            .payment-method:hover {
+                background-color: #1695ff;
+                color: white;
+            }
+
+
+            .payment-method img {
+                max-width: 100px;
+                margin-bottom: 10px;
+            }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        .box {
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .box a {
+                display: inline-block;
+                background-color: #fff;
+                padding: 15px;
+                border-radius: 3px;
+            }
+
+        .modal {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgb(18 15 15 / 0.48);
+            transition: all 0.4s;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .content {
+            position: absolute;
+            background: white;
+            width: 400px;
+            padding: 1em 2em;
+            border-radius: 4px;
+        }
+
+        .modal:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .box-close {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            color: #fe0606;
+            text-decoration: none;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Payment Methods</h1>
+    </header>
+    <main>
+        <div class="payment-method">
+            <a href="@Url.Action("Method", "LoginStudent")"><h4><u>Credit Card</u></h4></a>
+            <p>Pay with your credit card securely.</p>
+        </div>
+
+        <div class="payment-method">
+
+            <a href="@Url.Action("Method", "LoginStudent")"><h4><u>Debit Card</u></h4></a>
+            <p>Pay with your Debit card securely.</p>
+        </div>
+
+        <div class="payment-method">
+
+            <a href="https://www.paypal.com/in/signin"><h4><u>PayPal</u></h4></a>
+            <p>Pay with your PayPal account.</p>
+        </div>
+        <div class="payment-method">
+
+            <a href="@Url.Action("Method", "LoginStudent")"><h4><u>Net Banking</u></h4></a>
+            <p>Pay through Net Banking.</p>
+        </div>
+        <div class="payment-method">
+
+            <a href="#popup-box"><h4><u>Google Pay</u></h4></a>
+            <p>Pay with your Google Pay account.</p>
+        </div>
+
+        <div class="payment-method">
+
+            <a href="#popup-box"><h4><u>UPI</u></h4></a>
+            <p>Pay with your UPI account.</p>
+        </div>
+
+        <div id="popup-box" class="modal">
+            <div class="content">
+                <h3 style="color: #b91616;">
+                    Please Pay through your Mobile App!
+                </h3>
+                <b>
+                    <p>Safe and secure transactions!</p>
+                </b>
+                <a href="#"
+                   class="box-close">
+                    ×
+                </a>
+            </div>
+        </div>
+
+        <!-- Add more payment methods here -->
+
+    </main>
+</body>
+
+</html>

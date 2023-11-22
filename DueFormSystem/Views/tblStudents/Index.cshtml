@@ -1,0 +1,106 @@
+﻿@model IEnumerable<DueFormSystem.tblStudent>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Student Details</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>PRN NO. </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Caste)
+        </th>
+        <th>
+            Date of Birth
+        </th>
+        <th>
+            Phone No
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.tblBranch.Branch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblCaste.Caste)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.tblGender.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblGym.Role)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblHostel.PRNNo)
+        </th>
+        <th>
+            Pending Book Id
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRNNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Caste)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblAccountSection.PRNNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblBranch.Branch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblCaste.Caste)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblDepartement.PRNNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblGender.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblGym.Role)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblLibrary.PendingBookingId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblStudentSection.PRNNo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PRNNo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PRNNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PRNNo })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,51 @@
+﻿@model DueFormSystem.tblScholarship
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblScholarship</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ScholarshipRemFromCollege)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScholarshipRemFromCollege)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberofScholarship)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberofScholarship)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblStudent.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblStudent.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblYesNo.Value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblYesNo.Value)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PRNNo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

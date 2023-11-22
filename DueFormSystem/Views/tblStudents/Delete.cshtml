@@ -1,0 +1,153 @@
+﻿@model DueFormSystem.tblStudent
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblStudent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Caste)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Caste)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblAccountSection.PRNNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblAccountSection.PRNNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblBranch.Branch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblBranch.Branch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblCaste.Caste)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblCaste.Caste)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblDepartement.PRNNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblDepartement.PRNNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblGender.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblGender.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblGym.Role)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblGym.Role)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblHostel.PRNNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblHostel.PRNNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblLibrary.PendingBookingId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblLibrary.PendingBookingId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblScholarship.PRNNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblScholarship.PRNNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblStudentSection.PRNNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblStudentSection.PRNNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblTPO.PRNNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblTPO.PRNNo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

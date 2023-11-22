@@ -1,0 +1,65 @@
+﻿@model DueFormSystem.tblDepartement
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblDepartement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Backlog)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Backlog)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CGPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CGPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblStudent.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblStudent.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblYesNo.Value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblYesNo.Value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblYesNo1.Value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblYesNo1.Value)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

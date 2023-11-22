@@ -1,0 +1,58 @@
+﻿@model IEnumerable<DueFormSystem.tblHostel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Hostel Details</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            PRN NO.
+        </th>
+        <th>
+            Pending Fees
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fine)
+        </th>
+        <th>
+            Student Name
+        </th>
+        <th>
+            Resident of Hostel
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.PRNNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PendingFee)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Fine)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.tblStudent.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.tblYesNo.Value)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.PRNNo }) |
+        @Html.ActionLink("Details", "Details", new { id = item.PRNNo }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.PRNNo })
+    </td>
+</tr>
+}
+
+</table>

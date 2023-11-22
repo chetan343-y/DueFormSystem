@@ -1,0 +1,69 @@
+﻿@model IEnumerable<DueFormSystem.tblDepartement>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<style>
+    .custom{
+        padding-left:30px;
+    }
+</style>
+<h2>List of Students in Department</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            PRN No.
+        </th>
+        <th>
+            Backlog
+        </th>
+        <th>
+            CGPA
+        </th>
+        <th>
+            Student Name
+        </th>
+        <th>
+            All Project Completed
+        </th>
+        <th>
+            Qualified (Pass)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<div class="custom"><tr></div>
+    <td>
+        @Html.DisplayFor(modelItem => item.PRNNo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.tblStudent.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Backlog)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CGPA)
+    </td>
+    
+    <td>
+        @Html.DisplayFor(modelItem => item.tblYesNo.Value)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.tblYesNo1.Value)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.PRNNo }) |
+        @Html.ActionLink("Details", "Details", new { id = item.PRNNo }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.PRNNo })
+    </td>
+</tr>
+}
+
+</table>

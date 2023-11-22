@@ -1,0 +1,59 @@
+﻿@model DueFormSystem.tblDepartement
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblDepartement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Backlog)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Backlog)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CGPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CGPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblStudent.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblStudent.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblYesNo.Value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblYesNo.Value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblYesNo1.Value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblYesNo1.Value)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PRNNo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
